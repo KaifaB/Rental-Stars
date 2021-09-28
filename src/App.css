@@ -113,7 +113,8 @@ body{
     font-family: 'Special Elite', cursive;
     font-size: 32px !important;
   }
-  .description p{
+  .desc{
+    margin: 12px 0;
     padding: 0 20px !important;
     text-align: center;
     font-family: 'Patrick Hand', cursive;
@@ -123,6 +124,9 @@ body{
   }
   .react-calendar{
     width: 300px !important;
+  }
+  .rented{
+    margin: 6px 0;
   }
   .cart-header{
     height: 50px !important;
@@ -147,6 +151,9 @@ body{
   }
   .cart-box p{
     font-size: 12px;
+  }
+  .dates{
+    border-left:solid white 1px;
   }
   .trash{
     height: 20px !important;
@@ -182,6 +189,18 @@ body{
     width:30px !important;
     height: 15px !important;
     font-size: 8px !important;
+  }
+  .modal{
+    height: 200px !important;
+  }
+  .modal h1{
+    font-size: 18px;
+    margin-top: 0 !important;
+  }
+  .modal button{
+    width: 70px !important;
+    height: 40px !important;
+    margin: 30px 20px !important;
   }
   #checkout{
     width: 100px !important;
@@ -606,12 +625,18 @@ th img{
 .description h1{
   font-size: 42px;
 }
-.description p{
+.desc{
   margin: 12px 0;
+  padding: 0 20px;
+  text-align: center;
+  font-family: 'Patrick Hand', cursive;
 }
 .praction{
   display: flex;
   justify-content: space-between;
+}
+.praction h2 {
+  font-family: 'Noto Sans', sans-serif;
 }
 .praction-btn{
   margin: 12px 0;
@@ -635,6 +660,9 @@ th img{
 }
 #please-select{
 margin: 0;
+}
+.rented{
+  margin: 6px 0;
 }
 #buy-now{
   width: 140px;
@@ -743,9 +771,20 @@ margin: 0;
   display:flex;
   justify-content: center;
   align-items: center;
+  margin-right: 10px;
 }
 .contain-edit button{
   margin: 0 auto;
+}
+.dates{
+  display:flex;
+  height: 100%;
+  border-left:solid white 1px;
+  align-items: center;
+  
+}
+.dates p{
+  margin: 0 8px;
 }
 .trash-container{
   display:flex;

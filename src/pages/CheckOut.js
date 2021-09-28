@@ -134,6 +134,7 @@ const CheckOut = () => {
         if(isValid){
             
             history.push('/thankyou');
+            localStorage.clear();
         }
     }
     

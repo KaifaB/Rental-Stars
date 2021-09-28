@@ -97,15 +97,18 @@ const CartItem = (props) => {
                             {props.name}
                         </div>
                         <div className="item-price">
-                            ${props.price} x {props.quantity} days
+                            ${props.price} x {props.quantity} day{props.quantity > 1 ? "s" : ""}
                         </div>
                         <div className="update">
                             <button onClick={edit}>Edit</button>
                         </div>
+                        <div className="dates">
+                            <p>{props.dates}</p>
+                        </div>
                     </div>
                     <div className="flex-item item-font">
                         <div className="item-price">
-                            = ${(props.price*amount).toFixedDown(2)}
+                            ${(props.price*amount).toFixedDown(2)}
                         </div>
                         <div className="trash-container">
                             <IoIosTrash className="trash" onClick={hideCart}/>

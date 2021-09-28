@@ -73,6 +73,7 @@ const Cart = (props) => {
                         index={index}
                         key={index}
                         own={curr.own}
+                        dates={curr.dates}
                         />
                     )
                 })

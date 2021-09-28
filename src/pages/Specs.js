@@ -16,8 +16,8 @@ const Specs = () => {
                 </tr>
                 <tr>
                     <td>Model Number</td>
-                    <td></td>
-                    <td></td>
+                    <td>3500z</td>
+                    <td>1300S</td>
                     <td>Alpha 250e</td>
                 </tr>
                 <tr>

@@ -25,7 +25,7 @@ const Rent = (props) => {
     //initiate a new cart item
     let itemCart = [];
     useEffect(() => {
-
+        console.log(value);
     }, [value])
     
     const rentThis = () => {
@@ -40,28 +40,18 @@ const Rent = (props) => {
                 'quantity' : JSON.stringify(amount),
                 'type' : props.info.type,
                 'id' : props.info.id + 3,
+                'dates' : (value[0].getMonth()+1) + "/" + value[0].getDate() + " - " + (value[1].getMonth()+1) + "/" + value[1].getDate(),
                 'own' : 'rent'
             }
             //Get array of cart from localstorage
             if (JSON.parse(localStorage.getItem('cart')) !== null){
                 itemCart = JSON.parse(localStorage.getItem('cart'));
             }
-            //figure if item exists in cart already
-            let exists = 0;
-            if (itemCart !== null ){
-                for (let i = 0; i < itemCart.length; i++) {
-                    if (cart.id === itemCart[i].id){
-                        exists += 1;
-                    }
-                }
-            }
-            //if item doesnt exist, push into cart
-            if (exists === 0){
-                itemCart.push(cart);
-            }
-            console.log(itemCart);
+            //push item to cart
+            itemCart.push(cart);
+            //push cart to storage
             localStorage.setItem('cart', JSON.stringify(itemCart));
-
+            //head to cart page
             history.push('/cart');
         }
     };
@@ -73,14 +63,16 @@ const Rent = (props) => {
             </div>
             <div className="description">
                 <h1>{props.info.title}</h1>
-                <p>{props.info.description}</p>
+                <p className="desc">{props.info.description}</p>
                 <Calendar
                     selectRange
                     onChange={onChange}
                     returnValue="range"
+                    tileDisable
                 />
                 {(Array.isArray(value)) ? amount + " days selected (return morning of last day)": ""}
                 <p id="please-select">{(isNaN(value[0] - value[1])) ? "Please select a date range" : ""}</p>
+                <p className="rented">{(Array.isArray(value)) ? (value[0].getMonth()+1) + "/" + value[0].getDate() + "/" + value[0].getFullYear() + "-" + (value[1].getMonth()+1) + "/" + value[1].getDate() + "/" + value[1].getFullYear() : ""}</p>
                 <div className="praction">
                     <h2>For only ${props.info.rent}/Day</h2>
                 </div>
