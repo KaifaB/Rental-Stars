@@ -73,6 +73,13 @@ body{
     margin: 60px auto 0 auto !important;
     justify-content: center !important;
   }
+  .active{
+    height:auto !important;
+    opacity: 1;
+    animation-name: slidein;
+    animation-timing-function: ease;
+    animation-duration: 0.6s;
+  }
   .whole{
     display: block !important;
     justify-content: center !important;
@@ -175,6 +182,29 @@ body{
     width:30px !important;
     height: 15px !important;
     font-size: 8px !important;
+  }
+  #checkout{
+    width: 100px !important;
+    height: 20px !important;
+    font-size: 14px !important;
+  }
+  form label{
+    font-size: 12px;
+    width: 120px !important;
+    margin-right: 15px;
+    margin: 12px 0;
+  }
+  form input{
+    width: 100px !important;
+    height: 12px;
+    font-size: 11px;
+  }
+  .err{
+    height: 9px !important;
+    font-size: 8px !important;
+  }
+  form button{
+    margin-top: 14px !important;
   }
 }
 
@@ -699,7 +729,7 @@ margin: 0;
   border-left: solid white 1px;
   display: flex;
   justify-content: center;
-  align-content: center;
+  align-items: center;
 }
 .update input{
   width: 20px;
@@ -780,14 +810,16 @@ margin: 0;
   align-self: center;
 }
 #checkout{
-  display: flex;
-  justify-content: center;
-  align-content: center;
+  background: #D8D9DA;
+  border:none;
+  border-radius: 15px;
+  font-weight: 300;
+  float:right;
   width: 200px;
   height: 30px;
   color: black;
   text-align: center;
-  margin: 0 auto;
+  margin: 30px 70px;
   font-size: 20px;
 }
 .IoArrowBack{
@@ -797,6 +829,10 @@ margin: 0;
 .IoArrowBack:hover{
   cursor: pointer;
   color: orangered;
+}
+.checkout{
+  display:flex;
+  justify-content: center;
 }
 .checkout__form{
   display:flex;
@@ -813,7 +849,6 @@ form{
   font-family: ProximaNova-Regular, Helvetica, Arial, sans-serif;
 }
 form .section{
-  margin-left: 40px;
   display: flex;
   flex-direction: column;
 }
@@ -826,16 +861,41 @@ form .half{
 }
 form h4{
   margin-bottom: 20px;
-  margin-left: 30px;
   font-size:22px;
 }
 form label{
   width: 200px;
   margin-right: 15px;
-  margin: 10px 0;
+  margin: 15px 0;
 }
 form input{
   margin: 9px 0;
+}
+.err{
+  height: 13px;
+  font-size: 12px;
+  color:rgb(255, 96, 96);
+}
+.checkout button{
+  width: 140px;
+  margin: 0 auto;
+}
+/*-----------Thank You PAGE ------------*/
+.thanks{
+  margin: 50px auto;
+  padding: 30px 0 0 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: #c5c5c5;
+  color: black;
+  width: 70%;
+  height: 300px;
+}
+.thanks h1{
+  font-family: 'Yesteryear', cursive;
+  font-size: 50px;
+  margin-bottom: 24px;
 }
 @keyframes bounce-up {
   0%   { transform: scale(1,1)      translateY(0); }

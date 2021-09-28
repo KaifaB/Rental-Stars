@@ -24,6 +24,7 @@ import About from './pages/About';
 import CheckOut from './pages/CheckOut';
 import FAQs from './pages/FAQs';
 import { Cart } from './pages/Cart';
+import ThankYou from './pages/ThankYou';
 
 //Dependencies 
 import { BrowserRouter as Router, Route } from 'react-router-dom';
@@ -106,6 +107,9 @@ function App() {
         </Route>
         <Route path='/checkout'>
           <CheckOut />
+        </Route>
+        <Route path='/thankyou'>
+          <ThankYou />
         </Route>
         <Route path='/FAQs'>
           <FAQs data={FAQsData}/>

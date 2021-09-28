@@ -83,10 +83,10 @@ const Cart = (props) => {
                 <div className="flex-end cart-box">
                     <p>Total = ${(amount + amount*(0.09)).toFixedDown(2)} </p>
                 </div>
-            </div>
-            <div>
-                <button id="checkout" onClick={checkout}>Checkout</button>
-            </div>
+                <div>
+                    <button id="checkout" onClick={checkout}>Checkout</button>
+                </div>
+            </div> 
         </div>
     )
 } else {

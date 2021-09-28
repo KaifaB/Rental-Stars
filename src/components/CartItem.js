@@ -21,7 +21,6 @@ const CartItem = (props) => {
     //Rerender componenet after updating an items quantity
     useEffect(() => {
         document.getElementsByClassName("update-amount").value = "";
-        console.log(props.index);
     }, [amount])
 
     //import correct image
@@ -141,7 +140,7 @@ const CartItem = (props) => {
                     </div>
                     <div className="flex-item item-font">
                         <div className="item-price">
-                            = ${(props.price*amount).toFixedDown(2)}
+                            ${(props.price*amount).toFixedDown(2)}
                         </div>
                         <div className="trash-container">
                             <IoIosTrash className="trash" onClick={hideCart}/>
