@@ -122,6 +122,7 @@ const CheckOut = () => {
         setEmailErr(emailErr);
         setAddressErr(addressErr);
         setCityErr(cityErr);
+        setStateErr(stateErr);
         setZipErr(zipErr);
         setCreditErr(creditErr);
         setExpireErr(expireErr);
