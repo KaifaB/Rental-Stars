@@ -90,7 +90,7 @@ const CheckOut = () => {
             isValid = false;
         }
         if (state.length !== 2){
-            zipErr.strangeAmount = " *Must be 2 digits";
+            stateErr.strangeAmount = " *Must be 2 digits";
             isValid = false;
         }
         if(!isNumeric(zip)){

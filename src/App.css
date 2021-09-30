@@ -403,10 +403,11 @@ th img{
 .FAQs::before{
   content: '[FAQs]';
   position: absolute;
-  color: rgb(77, 77, 77);
+  color: rgb(66, 66, 66);
   top: 40px;
   left: -70px;
   font-size: 24em;
+  opacity: 0.4;
   transform:rotateZ(-30deg);
   z-index: -1;
 }
@@ -426,7 +427,7 @@ th img{
   font-family: 'Oswald', sans-serif;
 }
 .ans{
-  font-family: 'Caveat', cursive;
+  font-family: 'Cormorant Garamond', serif;
   font-size:18px;
 }
 
